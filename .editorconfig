@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# AI_EA04: Argument for source has invalid type
+dotnet_diagnostic.AI_EA04.severity = none
+
+# AI_EA00: Advice must have invalid signature
+dotnet_diagnostic.AI_EA00.severity = none

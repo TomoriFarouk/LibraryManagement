@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog" Version="5.3.2" />
+    <PackageReference Include="PostSharp" Version="2024.1.4.0" />
+  </ItemGroup>
+   <ItemGroup>
+     <None Remove="Common\" />
+     <None Remove="Common\Interface\" />
+     <None Remove="Command\" />
+     <None Remove="Response\" />
+     <None Remove="Handler\" />
+     <None Remove="Mapper\" />
+     <None Remove="Common\Exceptions\" />
+     <None Remove="Handler\CommandHandler\" />
+     <None Remove="Handler\QueryHandler\" />
+     <None Remove="Queries\" />
+     <None Remove="Common\Logger\" />
+     <None Remove="Common\CacheFolder\" />
+   </ItemGroup>
+   <ItemGroup>
+     <Folder Include="Common\" />
+     <Folder Include="Common\Interface\" />
+     <Folder Include="Command\" />
+     <Folder Include="Response\" />
+     <Folder Include="Handler\" />
+     <Folder Include="Mapper\" />
+     <Folder Include="Common\Exceptions\" />
+     <Folder Include="Handler\CommandHandler\" />
+     <Folder Include="Handler\QueryHandler\" />
+     <Folder Include="Queries\" />
+     <Folder Include="Common\Logger\" />
+     <Folder Include="Common\CacheFolder\" />
+   </ItemGroup>
+   <ItemGroup>
+     <ProjectReference Include="..\LibraryManagement.Core\LibraryManagement.Core.csproj" />
+   </ItemGroup>
+</Project>

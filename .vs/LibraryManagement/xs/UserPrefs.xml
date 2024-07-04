@@ -1,0 +1,188 @@
+﻿<Properties StartupConfiguration="{01A3ECC4-59C3-4615-B8D1-027DE47351D0}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Src.LibraryManagement.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Src/LibraryManagement.Application/LibraryManagement.Application.csproj">
+    <Files>
+      <File FileName="../TaskManager/Src/TaskManager.Core/Entities/Base/BaseEntity.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Entities/Identity/ApplicationUser.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/TaskManager.Core.csproj" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/TaskManager.Infrastructure.csproj" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Services/IdentityService.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Services/TokenGenerator.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Interface/ITokenGenerator.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Interface/IIdentityService.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Controllers/AuthController.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/AuthCommand/LoginAuthCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Response/AuthResponse.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/AuthCommand/RegisterAuthCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/appsettings.json" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Program.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/TaskManager.API.csproj" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/TaskManager.Application.csproj" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Startup.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Class1.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Entities/Project.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Command/Base/CommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Command/Base/ICommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Command/ITaskCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Command/ProjectCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Command/IProjectCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Controllers/TaskController.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Controllers/ProjectController.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Response/TaskResponse.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Response/ProjectResponse.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/TaskCommand/CreateTaskCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/TaskCommand/EditTaskCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/TaskCommand/DeleteTaskCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Mapper/TaskManagerMapper.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Mapper/TaskManagerMapperProfile.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/ProjectCommand/CreateProjectCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/ProjectCommand/EditProjectCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Exceptions/BadRequestException.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Exceptions/ForbiddenAccessRequest.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Exceptions/NotFoundException.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Common/Exceptions/ValidationException.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/CreateTaskHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/DeleteTaskHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/EditTaskHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Query/Base/QueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Data/DbConnector.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Query/Base/IQueryInterface.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Query/IProjectQueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Query/TaskQueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Entities/Tasks.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Query/ProjectQueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/ProjectHandler/EditProjectHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/ProjectHandler/DeleteProjectHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/ProjectCommand/DeleteProjectCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Queries/ProjectQueries.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Queries/TaskQueries.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/TaskQueryHandler/GetTaskByIdHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/TaskQueryHandler/GetTaskByStatusHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/TaskQueryHandler/GetTaskByPriorityHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/ProjectQueryHandler/GetAllProjectHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/ProjectQueryHandler/GetProjectByIdHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/TaskManager.db" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Command/TaskCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/ProjectHandler/CreateProjectHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Query/ITaskQueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/AuthHandler/LoginAuthCommandHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/TaskQueryHandler/GetAllTaskDueForTheWeek.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/TaskQueryHandler/GetAllTaskHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Data/ApplicationDbContext.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Interface/Command/INotificationCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Command/NotificationCommandRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/AuthHandler/RegisterAuthCommandHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/ToggleIsCompletedCommandHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/TaskCommand/ToggleIsCompletedCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/NotificationHandler/CreateNotificationHandler.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Command/NotificationCommand/IsReadCommand.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Repository/Query/NotificationQueryRepository.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/Controllers/NotificationController.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Data/NotificationBackgroundService.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Core/Entities/Notification.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.Infrastructure/Services/LoggerManager.cs" />
+      <File FileName="../TaskManager/Src/TaskManager.API/nlog.config" />
+      <File FileName="../TaskManager/Src/TaskManager.API/bin/Debug/net7.0/logs/logfile.txt" />
+      <File FileName="../TaskManager/Src/TaskManager.Application/Handlers/QueryHandlers/NotificationQueryHandler/IsReadNotificationHandler.cs" />
+      <File FileName="Src/LibraryManagement.Infrastructure/LibraryManagement.Infrastructure.csproj" Line="26" Column="72" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Services/TokenGenerator.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Services/IdentityService.cs" Line="37" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Common/Interface/IIdentityService.cs" Line="9" Column="14" />
+      <File FileName="Src/LibraryManagement.Application/Common/Interface/ITokenGenerator.cs" />
+      <File FileName="Src/LibraryManagement.API/Controllers/AuthController.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Command/AuthCommand.cs" />
+      <File FileName="Src/LibraryManagement.Application/Response/AuthResponse.cs" />
+      <File FileName="Src/LibraryManagement.API/Startup.cs" Line="130" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Command/BookCommandRepository.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Query/Base/QueryRepository.cs" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Query/BookQueryRepository.cs" Line="48" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Data/ApplicationDbContext.cs" Line="53" Column="1" />
+      <File FileName="Src/LibraryManagement.Core/Interface/COMMAND/Base/ICommand.cs" />
+      <File FileName="Src/LibraryManagement.Core/Interface/COMMAND/IBookCommand.cs" />
+      <File FileName="Src/LibraryManagement.Core/Interface/Query/Base/IQuery.cs" />
+      <File FileName="Src/LibraryManagement.Core/Interface/Query/IBookQuery.cs" />
+      <File FileName="Src/LibraryManagement.Application/Command/BookCommand.cs" Line="59" Column="1" />
+      <File FileName="Src/LibraryManagement.Core/Entities/Books.cs" Line="29" Column="9" />
+      <File FileName="Src/LibraryManagement.Core/Entities/Base/BaseEntity.cs" Line="19" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Response/BookResponse.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Mapper/LibraryManagementMapper.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Mapper/LibraryManagementMapperProfile.cs" Line="24" Column="56" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Query/PatronQueryRepository.cs" Line="51" Column="6" />
+      <File FileName="Src/LibraryManagement.Application/Handler/QueryHandler/BookQueryHandler.cs" Line="72" Column="27" />
+      <File FileName="Src/LibraryManagement.Application/Handler/CommandHandler/PatronCommandHandler.cs" Line="108" Column="27" />
+      <File FileName="Src/LibraryManagement.Application/Handler/CommandHandler/BookCommandHandler.cs" Line="123" Column="27" />
+      <File FileName="Src/LibraryManagement.Application/Handler/QueryHandler/PatronQueryHandler.cs" Line="53" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Query/BorrowingRecordQueryRepository.cs" Line="67" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Command/BorrowingRecordCommandRepository.cs" Line="9" Column="105" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Command/PatronCommandRepository.cs" Line="14" Column="6" />
+      <File FileName="Src/LibraryManagement.Core/Interface/Query/IBorrowingRecordQuery.cs" Line="13" Column="6" />
+      <File FileName="Src/LibraryManagement.Core/Interface/Query/IPatronQuery.cs" Line="12" Column="6" />
+      <File FileName="Src/LibraryManagement.Core/Interface/COMMAND/IBorrowingRecordCommand.cs" Line="7" Column="38" />
+      <File FileName="Src/LibraryManagement.Core/Interface/COMMAND/IPatronCommand.cs" Line="10" Column="6" />
+      <File FileName="Src/LibraryManagement.Application/Response/PatronResponse.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Response/BorrowingRecordResponse.cs" Line="20" Column="1" />
+      <File FileName="Src/LibraryManagement.Core/Entities/BorrowingRecord.cs" Line="11" Column="19" />
+      <File FileName="Src/LibraryManagement.Application/Command/BorrowingRecordCommand.cs" Line="22" Column="40" />
+      <File FileName="Src/LibraryManagement.Application/Command/PatronCommand.cs" Line="44" Column="47" />
+      <File FileName="Src/LibraryManagement.Application/Queries/BorrowingRecordQueries.cs" Line="27" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Queries/PatronQueries.cs" Line="23" Column="10" />
+      <File FileName="Src/LibraryManagement.Application/Handler/CommandHandler/BorrowingRecordCommandHandler.cs" Line="198" Column="27" />
+      <File FileName="Src/LibraryManagement.Application/Handler/CommandHandler/AuthCommandHandler.cs" Line="29" Column="13" />
+      <File FileName="Src/LibraryManagement.API/Controllers/BookController.cs" Line="41" Column="1" />
+      <File FileName="Src/LibraryManagement.API/Controllers/BorrowingRecordController.cs" Line="48" Column="1" />
+      <File FileName="Src/LibraryManagement.API/appsettings.json" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.API/Program.cs" Line="15" Column="1" />
+      <File FileName="Src/LibraryManagement.API/nlog.config" Line="1" Column="40" />
+      <File FileName="Src/LibraryManagement.Application/Class1.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.API/Properties/launchSettings.json" Line="25" Column="14" />
+      <File FileName="Src/LibraryManagement.API/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Data/DbConnector.cs" Line="21" Column="1" />
+      <File FileName="Src/LibraryManagement.Core/Entities/Patron.cs" Line="23" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Repository/Command/Base/CommandRepository.cs" Line="27" Column="1" />
+      <File FileName="Src/LibraryManagement.API/Controllers/PatronController.cs" Line="41" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Migrations/20240701092305_ThirdMigrations.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Infrastructure/Migrations/20240701092305_ThirdMigrations.Designer.cs" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Handler/QueryHandler/BookingRecordQueriesHandler.cs" Line="23" Column="27" />
+      <File FileName="Src/LibraryManagement.API/bin/Debug/net7.0/logs/logfile.log" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/Common/Logger/LoggingAspect.cs" Line="3" Column="16" />
+      <File FileName="../.nuget/packages/nlog.config/4.7.15/contentFiles/any/any/NLog.config" Line="1" Column="1" />
+      <File FileName="Src/LibraryManagement.Application/LibraryManagement.Application.csproj" Line="15" Column="56" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LibraryManagement" expanded="True">
+            <Node name="Src" expanded="True">
+              <Node name="LibraryManagement.API" expanded="True">
+                <Node name="appsettings.json" expanded="True" />
+              </Node>
+              <Node name="LibraryManagement.Application" expanded="True" selected="True">
+                <Node name="Common" expanded="True">
+                  <Node name="Logger" expanded="True" />
+                </Node>
+                <Node name="Response" expanded="True" />
+              </Node>
+              <Node name="LibraryManagement.Infrastructure" expanded="True">
+                <Node name="Data" expanded="True" />
+                <Node name="Services" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/macbook/TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/CreateTaskHandler.cs" line="17" column="1" />
+      <Breakpoint file="/Users/macbook/TaskManager/Src/TaskManager.Application/Handlers/CommandHandlers/TaskHandler/EditTaskHandler.cs" line="28" column="1" />
+      <Breakpoint file="/Users/macbook/TaskManager/Src/TaskManager.Infrastructure/Repository/Command/Base/CommandRepository.cs" line="25" column="1" />
+      <Breakpoint file="/Users/macbook/LibraryManagement/Src/LibraryManagement.Application/Handler/CommandHandler/BookCommandHandler.cs" relfile="Src/LibraryManagement.Application/Handler/CommandHandler/BookCommandHandler.cs" line="34" column="1" />
+      <Breakpoint file="/Users/macbook/LibraryManagement/Src/LibraryManagement.Application/Handler/CommandHandler/PatronCommandHandler.cs" relfile="Src/LibraryManagement.Application/Handler/CommandHandler/PatronCommandHandler.cs" line="30" column="1" />
+      <Breakpoint file="/Users/macbook/LibraryManagement/Src/LibraryManagement.Application/Handler/CommandHandler/BorrowingRecordCommandHandler.cs" relfile="Src/LibraryManagement.Application/Handler/CommandHandler/BorrowingRecordCommandHandler.cs" line="98" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

@@ -1,0 +1,12 @@
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.csproj.AssemblyReference.cache
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.AssemblyInfoInputs.cache
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.AssemblyInfo.cs
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.csproj.CoreCompileInputs.cache
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/bin/Debug/net7.0/LibraryManagement.Core.deps.json
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/bin/Debug/net7.0/LibraryManagement.Core.dll
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/bin/Debug/net7.0/LibraryManagement.Core.pdb
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.dll
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/refint/LibraryManagement.Core.dll
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/LibraryManagement.Core.pdb
+/Users/macbook/LibraryManagement/Src/LibraryManagement.Core/obj/Debug/net7.0/ref/LibraryManagement.Core.dll

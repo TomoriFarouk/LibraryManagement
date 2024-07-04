@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspectInjector" Version="2.7.4" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Repository\" />
+    <None Remove="Services\" />
+    <None Remove="Repository\Command\" />
+    <None Remove="Repository\Query\" />
+    <None Remove="Repository\Command\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repository\Command\" />
+    <Folder Include="Repository\Query\" />
+    <Folder Include="Repository\Command\Base\" />
+    <Folder Include="Repository\Query\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.Core\LibraryManagement.Core.csproj" />
+    <ProjectReference Include="..\LibraryManagement.Application\LibraryManagement.Application.csproj" />
+  </ItemGroup>
+</Project>

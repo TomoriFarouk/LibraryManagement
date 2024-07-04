@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Entities\Base\" />
+    <None Remove="Entities\Identity\" />
+    <None Remove="Interface\" />
+    <None Remove="Interface\COMMAND\" />
+    <None Remove="Interface\Query\" />
+    <None Remove="Interface\COMMAND\Base\" />
+    <None Remove="Interface\Query\Base\" />
+    <None Remove="..\..\.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Base\" />
+    <Folder Include="Entities\Identity\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Interface\COMMAND\" />
+    <Folder Include="Interface\Query\" />
+    <Folder Include="Interface\COMMAND\Base\" />
+    <Folder Include="Interface\Query\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.0" />
+
+  </ItemGroup>
+</Project>

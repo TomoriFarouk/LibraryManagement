@@ -4,6 +4,7 @@ using LibraryManagement.Core.Entities;
 using LibraryManagement.Core.Interface.COMMAND;
 using LibraryManagement.Core.Interface.Query;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using static LibraryManagement.Application.Command.BorrowingRecordCommand;
@@ -205,12 +206,14 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                 _logger.LogInformation($"Handling {nameof(EditBorrowingRecordCommand)} with data: {JsonConvert.SerializeObject(request)}");
 
                 var borrowingRecordEntity = LibraryManagementMapper.Mapper.Map<BorrowingRecord>(request);
+               
                 if (borrowingRecordEntity == null)
                 {
                     _logger.LogError("Mapping failed for EditBorrowingRecordCommand.");
                     throw new ApplicationException("There is a problem in mapper.");
                 }
 
+                borrowingRecordEntity.LastModified = DateTime.Now;
                 try
                 {
                     await _borrowingRecordCommand.UpdateAsync(borrowingRecordEntity);
@@ -222,8 +225,8 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                 }
 
                 var borrowingRecords = await _borrowingRecordQuery.GetAllAsync();
-                var updatedBorrowingRecord = borrowingRecords.FirstOrDefault(x => x.Id == request.Id);
-                var borrowingRecordResponse = LibraryManagementMapper.Mapper.Map<BorrowingRecordResponse>(updatedBorrowingRecord);
+                var modifiedBorrowingRecord = borrowingRecords.FirstOrDefault(x => x.Id == request.Id);
+                var borrowingRecordResponse = LibraryManagementMapper.Mapper.Map<BorrowingRecordResponse>(modifiedBorrowingRecord);
                 _logger.LogInformation($"Borrowing record updated successfully for record ID: {borrowingRecordResponse.Id}");
 
                 // Invalidate the cache for this specific book

@@ -42,6 +42,7 @@ namespace LibraryManagement.Application.Command
 
             public DateTime ReturnedDate { get; set; }
 
+
             public ReturnBookRecordCommand()
             {
                 this.ReturnedDate = DateTime.Now;
@@ -68,6 +69,10 @@ namespace LibraryManagement.Application.Command
             public string ContactInformation { get; set; }
 
             public DateTime ModifiedDate { get; set; }
+
+            public DateTime LastModified { get; set; }
+
+            public byte[] RowVersion { get; set; }
 
             public EditBorrowingRecordCommand()
             {

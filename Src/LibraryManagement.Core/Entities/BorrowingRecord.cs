@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using LibraryManagement.Core.Entities.Base;
 using LibraryManagement.Core.Entities.Identity;
 
 namespace LibraryManagement.Core.Entities
 {
-	public class BorrowingRecord
+	public class BorrowingRecord:BaseEntity
 	{
         public int Id { get; set; }
         [Required]

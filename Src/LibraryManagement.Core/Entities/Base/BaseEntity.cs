@@ -8,9 +8,12 @@ namespace LibraryManagement.Core.Entities.Base
 	{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Int64 Id { get; set; }
+        public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; private set; }
+        public DateTime LastModified { get;  set; }
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
 
         public BaseEntity()
         {

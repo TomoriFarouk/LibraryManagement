@@ -18,6 +18,7 @@ namespace LibraryManagement.Application.Response
       
         public string UserId { get; set; }
 
+        public byte[] RowVersion { get; set; }
 
         public DateTime BorrowDate { get; set; }
 

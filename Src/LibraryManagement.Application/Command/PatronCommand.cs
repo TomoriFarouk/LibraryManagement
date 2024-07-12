@@ -45,6 +45,9 @@ namespace LibraryManagement.Application.Command
 
             public DateTime ModifiedDate { get; set; }
 
+            public DateTime LastModified { get; set; }
+
+            public byte[] RowVersion { get; set; }
 
             public EditPatronCommand()
             {

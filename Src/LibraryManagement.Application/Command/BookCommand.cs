@@ -22,14 +22,10 @@ namespace LibraryManagement.Application.Command
 
             public string ISBN { get; set; }
 
-            public DateTime CreatedDate { get; set; }
 
             public string UserId { get; set; }
 
-            public CreateBookCommand()
-            {
-                this.CreatedDate = DateTime.Now;
-            }
+           
         }
 
         public class DeleteBookCommand : IRequest<String>
@@ -60,6 +56,11 @@ namespace LibraryManagement.Application.Command
             public string UserId { get; set; }
 
             public DateTime ModifiedDate { get; set; }
+
+            public DateTime LastModified { get; set; }
+
+            public byte[] RowVersion { get; set; }
+
 
             public EditBookCommand()
             {

@@ -5,6 +5,7 @@ using LibraryManagement.Core.Entities;
 using LibraryManagement.Core.Interface.COMMAND;
 using LibraryManagement.Core.Interface.Query;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using static LibraryManagement.Application.Command.BookCommand;
@@ -83,6 +84,9 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                 // Add new book
                 bookEntity.applicationUser = userExists;
                 var newBook = await _bookCommand.AddAsync(bookEntity);
+                var books = await _bookQuery.GetAllAsync();
+                var modifiedBook = books.FirstOrDefault(x => x.ISBN == newBook.ISBN);
+
                 var bookResponse = LibraryManagementMapper.Mapper.Map<BookResponse>(newBook);
                 _logger.LogInformation($"Book created successfully with ISBN: {bookResponse.ISBN}");
 
@@ -109,7 +113,7 @@ namespace LibraryManagement.Application.Handler.CommandHandler
             /// <param name="bookCommand">The book command service.</param>
             /// <param name="logger">The logger service.</param>
             /// <param name="bookQuery">The book query service.</param>
-            public EditBookHandler(IBookCommand bookCommand, ILogger<EditBookHandler> logger, IBookQuery bookQuery,CacheManager cache)
+            public EditBookHandler(IBookCommand bookCommand, ILogger<EditBookHandler> logger, IBookQuery bookQuery, CacheManager cache)
             {
                 _bookCommand = bookCommand;
                 _logger = logger;
@@ -120,18 +124,21 @@ namespace LibraryManagement.Application.Handler.CommandHandler
             /// <inheritdoc />
             public async Task<BookResponse> Handle(EditBookCommand request, CancellationToken cancellationToken)
             {
-                
                 string cacheTag = $"Book{request.Id}";
                 string cachetagIsbn = $"Book{request.ISBN}";
                 _logger.LogInformation($"Handling {nameof(EditBookCommand)} with data: {JsonConvert.SerializeObject(request)}");
 
                 // Map request to entity
                 var bookEntity = LibraryManagementMapper.Mapper.Map<Books>(request);
+
                 if (bookEntity == null)
                 {
                     _logger.LogError("Mapping failed for EditBookCommand.");
                     throw new ApplicationException("There is a problem in mapper.");
                 }
+
+                // Set LastModified and RowVersion
+                bookEntity.LastModified = DateTime.UtcNow;
 
                 // Update book
                 try
@@ -144,7 +151,7 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                     throw new ApplicationException(exp.Message);
                 }
 
-                // Invalidate the cache for this specifi
+                // Invalidate the cache for this specific book
                 _cache.InvalidateByTag(cacheTag);
                 _cache.InvalidateByTag(cachetagIsbn);
 
@@ -154,15 +161,14 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                 var bookResponse = LibraryManagementMapper.Mapper.Map<BookResponse>(modifiedBook);
                 _logger.LogInformation($"Book updated successfully with ISBN: {bookResponse?.ISBN}");
 
-               
                 return bookResponse;
             }
         }
 
-        /// <summary>
-        /// Handler for deleting a book.
-        /// </summary>
-        public class DeleteBookHandler : IRequestHandler<DeleteBookCommand, string>
+            /// <summary>
+            /// Handler for deleting a book.
+            /// </summary>
+            public class DeleteBookHandler : IRequestHandler<DeleteBookCommand, string>
         {
             private readonly IBookCommand _bookCommand;
             private readonly ILogger<DeleteBookHandler> _logger;

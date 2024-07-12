@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using LibraryManagement.Core.Entities.Identity;
 using LibraryManagement.Core.Entities;
+using System.Reflection.Emit;
 
 namespace LibraryManagement.Infrastructure.Data
 {
@@ -28,6 +29,7 @@ namespace LibraryManagement.Infrastructure.Data
                 WithOne(u => u.Book).
                 HasForeignKey(t=>t.BookId);
 
+
             builder.Entity<ApplicationUser>().
               HasMany(b => b.book).
               WithOne(u => u.applicationUser).
@@ -38,6 +40,24 @@ namespace LibraryManagement.Infrastructure.Data
                HasMany(b => b.BorrowingRecords).
                WithOne(c => c.patron).
                HasForeignKey(t=>t.PatronId);
+
+            // FOR CONCURRENCY CHECK åç
+            builder.Entity<Books>()
+               .Property(b => b.RowVersion)
+               .IsRowVersion();
+
+            builder.Entity<Patron>()
+              .Property(b => b.RowVersion)
+              .IsRowVersion();
+
+            builder.Entity<BorrowingRecord>()
+             .Property(b => b.RowVersion)
+             .IsRowVersion();
+
+            //builder.Entity<BorrowingRecord>().
+            //   HasMany(b => b.).
+            //   WithOne(c => c.patron).
+            //   HasForeignKey(t => t.PatronId);
 
             builder.Entity<ApplicationUser>().
               HasMany(b => b.patrons).

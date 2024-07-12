@@ -17,6 +17,7 @@ using NLog.Extensions.Logging;
 using LibraryManagement.Core.Entities.Identity;
 using static LibraryManagement.Application.Handler.CommandHandler.BookCommandHandler;
 using System.Reflection;
+using LibraryManagement.Application.Common.Exceptions;
 
 namespace LibraryManagement.API
 {
@@ -185,6 +186,8 @@ namespace LibraryManagement.API
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

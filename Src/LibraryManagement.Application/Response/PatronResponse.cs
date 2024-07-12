@@ -14,7 +14,9 @@ namespace LibraryManagement.Application.Response
        
         public string ContactInformation { get; set; }
 
-     }
+        public byte[] RowVersion { get; set; }
+
+    }
   }
 
 

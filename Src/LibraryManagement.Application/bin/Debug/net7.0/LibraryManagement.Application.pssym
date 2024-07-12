@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="906" PostSharpLinesOfCode="0" EnhancedTypesCount="1" SchemaVersion="1" PostSharpVersion="2024.1.4.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="938" PostSharpLinesOfCode="0" EnhancedTypesCount="1" SchemaVersion="1" PostSharpVersion="2024.1.4.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[PostSharp]PostSharp.Serialization.PSerializableAttribute">
     <Instance Declaration="#2=T:[LibraryManagement.Application]LogExecutionAttribute" Id="b41bd08a00008005">
       <Target />

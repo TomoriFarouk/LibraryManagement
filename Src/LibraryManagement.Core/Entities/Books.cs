@@ -34,6 +34,8 @@ namespace LibraryManagement.Core.Entities
 
         public ICollection<BorrowingRecord>BorrowingRecords { get; set; }
         public ICollection<Patron> patrons { get; set; }
+
+       
     }
 }
 

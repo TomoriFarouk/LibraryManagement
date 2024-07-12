@@ -5,6 +5,7 @@ using LibraryManagement.Core.Entities;
 using LibraryManagement.Core.Interface.COMMAND;
 using LibraryManagement.Core.Interface.Query;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using static LibraryManagement.Application.Command.BookCommand;
@@ -113,18 +114,20 @@ namespace LibraryManagement.Application.Handler.CommandHandler
                 _logger.LogInformation($"Handling {nameof(EditBookCommand)} with data: {JsonConvert.SerializeObject(request)}");
 
                 // Map request to entity
-                var ProjectEntity = LibraryManagementMapper.Mapper.Map<Patron>(request);
-
-                if (ProjectEntity is null)
+                var patronEntity = LibraryManagementMapper.Mapper.Map<Patron>(request);
+                
+                if (patronEntity is null)
                 {
                     _logger.LogError("Mapping failed for EditPatronCommand.");
                     throw new ApplicationException("There is a problem in mapper.");
                 }
 
+               
+                patronEntity.LastModified = DateTime.Now;
                 // Update book
                 try
                 {
-                    await _patronCommand.UpdateAsync(ProjectEntity);
+                    await _patronCommand.UpdateAsync(patronEntity);
                 }
                 catch (Exception exp)
                 {
@@ -163,8 +166,7 @@ namespace LibraryManagement.Application.Handler.CommandHandler
             /// <param name="logger">The logger service.</param>
             /// <param name="patronQuery">The book query service.</param>
             /// 
-            public DeletePatronHandler(IPatronCommand patronCommand, ILogger logger, IPatronQuery patronQuery,CacheManager cache
-                )
+            public DeletePatronHandler(IPatronCommand patronCommand, ILogger logger, IPatronQuery patronQuery,CacheManager cache)
             {
                 _patronCommand = patronCommand;
                 _logger = logger;

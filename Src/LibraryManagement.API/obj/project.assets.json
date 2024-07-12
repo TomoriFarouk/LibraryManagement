@@ -1706,6 +1706,7 @@
           "Microsoft.Data.Sqlite.Core": "8.0.4",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.6",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "NLog.Web.AspNetCore": "5.3.11"
         },
